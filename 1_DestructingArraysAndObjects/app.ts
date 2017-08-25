@@ -49,9 +49,8 @@ let employees: Employee[] = [
 
 /*** Destructuring Arrays ***/
 
-let [scott, eudes, shijir, ...others] = employees;
-/*
-console.log("*******");
+let [scott, eudes, shijir, ...others] = employees; //... is the Rest operator
+/*console.log("*******");
 console.log(scott);
 console.log(eudes);
 console.log(shijir);
@@ -133,6 +132,18 @@ let regularEmployees: string[] = ["Eudes", "Scott", "Jeeyun", "Shijir", "Matt", 
 allStarEmojiUploaders.push(...regularEmployees);
 
 //console.log(allStarEmojiUploaders);
+
+
+//Shallow Copy of an Object
+const todo = {
+    text: "Water the flowers",
+    completed: false,
+    tags: ["garden"]
+};
+
+const shallowCopy = { ...todo };
+
+console.log(shallowCopy);
 
 
 
